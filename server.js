@@ -41,7 +41,7 @@ io.sockets.on('connection', function (socket) {
     });
     
 
-    socket.on('createGame', function (data){
+    socket.on('createVideoRoom', function (data){
         currentGame = ([userName, '_', data.gameName]).join('');
         isMaster = true;
         games[currentGame] = { id: currentGame, 
